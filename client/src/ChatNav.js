@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 class ChatNav extends Component {
   handleToggleUsers () {
@@ -15,7 +16,9 @@ class ChatNav extends Component {
           </Navbar.Brand>
         </Navbar.Header>
         <Nav pullRight>
-          <NavItem onClick={this.handleToggleUsers} href="#">Toggle Users</NavItem>
+          <NavItem><Link to="/about">About</Link></NavItem>
+          <NavItem><Link to="/">Chat</Link></NavItem>
+          <NavItem onClick={this.handleToggleUsers}>Toggle Users</NavItem>
         </Nav>
       </Navbar>
     );
